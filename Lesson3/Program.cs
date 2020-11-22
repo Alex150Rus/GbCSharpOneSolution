@@ -10,6 +10,10 @@ namespace Lesson3
     {
         static void Main(string[] args)
         {
+            Complex.ShowHowStructureWorks();
+            Console.WriteLine();
+            ComplexClass.ShowHowComplexClassWorks();
+            ComplexClass.ShowComplexClassWorksUsingSwitch();
         }
     }
 }
