@@ -118,6 +118,12 @@ namespace Lesson3
             Console.WriteLine($"Произведение двух комплексных чисел: {x5}");
         }
 
+        /// <summary>
+        /// Метод генерирует комплексное число по пользовательскому вводу
+        /// </summary>
+        /// <param name="variableName1"></param>
+        /// <param name="variableName2"></param>
+        /// <returns>Комплексное число</returns>
         public static ComplexClass getComplexNumber(string variableName1, string variableName2)
         {
             double a1 = Helpers.StringHelper.getUserInputAndConvertToDouble(variableName1);
@@ -125,6 +131,9 @@ namespace Lesson3
             return new ComplexClass(a1, a2);
         }
 
+        /// <summary>
+        /// Метод демонстрирует работу класса ComplexClass используя switch
+        /// </summary>
         public static void ShowComplexClassWorksUsingSwitch()
         {
             Console.WriteLine();
