@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5273C4F7-8B9F-4885-A5F7-19A8577A33BE}</ProjectGuid>
+    <ProjectGuid>{0BD286F0-4864-4319-8747-D9A61388479A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson3</RootNamespace>
-    <AssemblyName>Lesson3</AssemblyName>
+    <RootNamespace>lesson3Point2</RootNamespace>
+    <AssemblyName>lesson3Point2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComplexClass.cs" />
-    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Complex.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
