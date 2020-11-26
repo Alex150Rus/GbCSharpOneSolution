@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{041A21F5-DA32-4F50-A239-128C8D1E7BE6}</ProjectGuid>
+    <ProjectGuid>{6AEB918B-B5D7-492F-ADF2-B808AA58DC86}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson4CWarrays</RootNamespace>
-    <AssemblyName>Lesson4CWarrays</AssemblyName>
+    <RootNamespace>ArrayLibrary</RootNamespace>
+    <AssemblyName>ArrayLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ArrayLibrary1\ArrayLibrary.csproj">
-      <Project>{62256d29-0018-4fb8-b59a-a38a08b2d4f1}</Project>
-      <Name>ArrayLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
