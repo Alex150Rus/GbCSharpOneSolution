@@ -27,7 +27,6 @@ namespace Lesson5task1
             IdentityValidator identityValidator = new IdentityValidator(user);
             Console.WriteLine($"Логин валиден: {identityValidator.validateLogin()}");
             Console.WriteLine($"Логин валиден: {identityValidator.validateLoginUsingRegExp()}");
-
         }
     }
 }
