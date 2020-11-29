@@ -11,6 +11,15 @@ namespace Lesson4CWarrays
         int[] array;
 
         /// <summary>
+        /// Конструктор создаёт массив заданной длины
+        /// </summary>
+        /// <param name="length"></param>
+        public MyArray (int length)
+        {
+            array = new int[length];
+        }
+
+        /// <summary>
         /// Конструктор заполняет массив определёнными значениями
         /// </summary>
         /// <param name="length">Длина массива</param>
@@ -37,6 +46,23 @@ namespace Lesson4CWarrays
             for (int i = 0; i < length; i++)
             {
                 array[i] = rnd.Next(min, max);
+            }
+        }
+
+        /// <summary>
+        /// Конструктор, создающий массив определённого размера и заполняющий массив числами от начального значения с заданным шагом
+        /// </summary>
+        /// <param name="length"></param>
+        /// <param name="step"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        public MyArray(int length, int step, int min, int max)
+        {
+            array = new int[length];
+            Random rnd = new Random();
+            for (int i = 0; i < length; i++)
+            {
+                if (i % step == 0) array[i] = rnd.Next(min, max);
             }
         }
 
@@ -101,13 +127,47 @@ namespace Lesson4CWarrays
         }
 
         /// <summary>
+        /// Свойство: сумма элементов массива с типом int
+        /// </summary>
+        public int Sum
+        {
+            get
+            {
+                return array.Sum();
+            }
+        }
+
+        /// <summary>
+        /// метод Inverse, возвращающий новый массив с измененными знаками у всех элементов массива (старый массив, остается без изменений)
+        /// </summary>
+        /// <returns>массив с измененными знаками у всех элементов массива</returns>
+        public MyArray Inverse()
+        {
+            MyArray newInverseArray = new MyArray(array.Length);
+            for (int i = 0; i < array.Length; i++)
+            {
+                newInverseArray[i] = -array[i];
+            }
+            return newInverseArray;
+        }
+
+        public void Multy(int factor)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] *= factor;
+            }
+        }
+
+        /// <summary>
         /// Индексируемое свойство
         /// </summary>
         /// <param name="i">индекс</param>
-        /// <returns>Элемент массива по указанному индексу</returns>
+        /// <returns>Возможность устанавливать и получать элемент массива по указанному индексу</returns>
         public int this[int i]
         {
             get { return array[i]; }
+            set { array[i] = value; }
         }
 
         /// <summary>
